@@ -1,13 +1,13 @@
 // donate-bitcoin Copyright (GPL) 2016  Nathan Robinson
 
-var address = "PUT_ADDRESS_HERE"; // The bitcoin address to receive donations. Change to yours
+var address = "bc1qjd3tpxgxxyggz60ymhdtysppw2lnuz684x0zhvq5kyds0hxaa2us7p9c3l"; // The bitcoin address to receive donations. Change to yours
 var popup = false; // Set to true if you want a popup to pay bitcoin
-var currencyCode = "USD"; // Change to your default currency. Choose from https://blockchain.info/ticker?cors=true
+var currencyCode = "BRL"; // Change to your default currency. Choose from https://blockchain.info/ticker?cors=true
 var qrcode = true; // Set to false to disable qrcode
 var link = true; // Set to false to disable generating hyperlink
-var organization = "Example"; // Change to your organization name
+var organization = "Marcello Moreira"; // Change to your organization name
 var mbits = true; // Set to false to display bitcoin traditionally
-var defaultAmountToDonate = 5; // Default amount to donate
+var defaultAmountToDonate = 1; // Default amount to donate
 var defaultCurrency = 'USD'; // Default currency to fallback
 var showDefaultCurrencyDisclaimer = true; // If the requested cuurency is not available show a warning
 
@@ -131,10 +131,10 @@ function getFiatDonationAmount() {
 function composeDonationElements(bitcoinAmountToDonate, fiatDonationAmount) {
     var url = "bitcoin:" + address + "?amount=" + bitcoinAmountToDonate;
     var fiatAmountToDonateMessage = " (" + fiatDonationAmount + " " + currencyCode + ") " + "to " + address;
-    var donateDisplayMessage = " Please send " + bitcoinAmountToDonate.toString() + " Bitcoin" + fiatAmountToDonateMessage;
+    var donateDisplayMessage = " Por favor envie " + bitcoinAmountToDonate.toString() + " Bitcoin" + fiatAmountToDonateMessage;
     if (mbits == true) {
         var mbitprice = (bitcoinAmountToDonate * 1000).toFixed(2);
-        var donateDisplayMessage = " Please send " + mbitprice.toString() + " mBits" + fiatAmountToDonateMessage;
+        var donateDisplayMessage = " Por favor envie " + mbitprice.toString() + " mBits" + fiatAmountToDonateMessage;
     }
     return {
         url: url,
