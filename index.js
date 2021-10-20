@@ -72,7 +72,7 @@ function getBitcoinPrice(currencyExchangeResponse) {
 }
 
 function drawCurrencyButton() {
-  document.getElementById("donationbutton").src = 'https://img.shields.io/badge/donate-' + currencyCode + '-brightgreen.svg?style=flat-square';
+  document.getElementById("donationbutton").src = 'https://img.shields.io/badge/Doar-' + currencyCode + '-brightgreen.svg';
 }
 
 function drawDonationElements(url, donateDisplayMessage) {
